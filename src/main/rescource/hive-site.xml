@@ -1,0 +1,56 @@
+<configuration>
+    <!-- 数据库 start -->
+    <property>
+        <name>javax.jdo.option.ConnectionURL</name>
+        <value>jdbc:mysql://172.19.246.151/hivemeta?createDatabaseIfNotExist=true&amp;amp;characterEncoding=UTF-8</value>
+        <description>mysql连接</description>
+    </property>
+
+	<property>
+		<name>javax.jdo.option.ConnectionUserName</name>
+		<value>root</value>
+		<description>数据库使用用户名</description>
+	</property>
+
+	<property>
+		<name>javax.jdo.option.ConnectionPassword</name>
+		<value>EMRroot1234</value>
+		<description>数据库密码</description>
+	</property>
+
+    <property>
+        <name>javax.jdo.option.ConnectionDriverName</name>
+        <value>com.mysql.jdbc.Driver</value>
+        <description>mysql驱动</description>
+    </property>
+    <!-- 数据库 end -->
+    <!-- HDFS start -->
+    <property>
+        <name>hive.metastore.warehouse.dir</name>
+        <value>hive/warehouse</value>
+        <description>hive使用的HDFS目录</description>
+    </property>
+
+    <!-- HDFS end -->
+    <!-- 其它 start -->
+    <property>
+        <name>datanucleus.autoCreateSchema</name>
+        <value>false</value>
+    </property>
+
+    <property>
+        <name>datanucleus.fixedDatastore</name>
+        <value>true</value>
+    </property>
+
+    <property>
+        <name>datanucleus.autoStartMechanism</name>
+        <value>SchemaTable</value>
+    </property>
+
+    <property>
+        <name>hive.cli.print.current.db</name>
+        <value>true</value>
+    </property>
+    <!-- 其它 end -->
+</configuration>
